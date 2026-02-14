@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Top bar */
+.top-bar {
+  background: #f5f5f5;
+  padding: 6px 40px;
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+  color: #333;
+  justify-content: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0c4c5a;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #07caf6;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Button */
+.btn-book {
+  background:#0c4c5a;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-book:hover{
+    background:#07caf6;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .btn-book {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+
+
+/* HERO */
+.hero {
+    height: 70vh;
+    background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content1 {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content1 h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content1 p {
+    font-size: 16px;
+}
+
+.hero-content1 span {
+    margin: 0 6px;
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 80px 8%;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* IMAGES */
+.about-images {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.about-images img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* TEXT */
+.about-text {
+    flex: 1;
+}
+
+.about-text h4 {
+    font-family: cursive;
+    color: #2c8f8f;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #0b3c49;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-images {
+        justify-content: center;
+    }
+
+    .about-images img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-content1 h1 {
+        font-size: 36px;
+    }
+}
+
+
+/* MAIN LAYOUT */
+.destination-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 50px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cardpack {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e0eef4;
+}
+
+.cardpack img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.cardpack-body {
+    padding: 20px;
+}
+
+.rating {
+    color: #f5a623;
+    font-size: 14px;
+}
+
+.rating span {
+    color: #555;
+}
+
+.cardpack-body h3 {
+    margin: 10px 0;
+}
+
+.cardpack-body p {
+    color: #666;
+    font-size: 14px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.price-row h4 {
+    font-size: 20px;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 1px solid #0a4d5c;
+    background: transparent;
+    color: #0a4d5c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background: #0a4d5c;
+    color: white;
+}
+
+/* HELP BOX */
+.help-box {
+    background:#45a3b8;
+    color: rgb(248, 247, 247);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    height: fit-content;
+    filter: blur(50%);
+}
+
+.help-box img {
+    margin: 20px 0;
+}
+
+.help-box p {
+    margin-top: 10px;
+}
+
+.help-box h3 {
+    margin: 10px 0 20px;
+}
+
+.read-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.read-btn:hover {
+    background: white;
+    color: #0a4d5c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .destination-section {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<body>
+    <!-- Top Bar -->
+<div class="top-bar">
+  <span>📍 Amarpali Golf Homes L2/1002</span>
+  <span>📞 +91-9873744533</span>
+  <span>✉️ globeeratravel@gmail.com</span>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">
+    <!-- <img src="logo.png" alt="Logo"> -->
+    <span>GLOBE ERA</span>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="packages.html">Our Packages</a>
+    <a href="services.html">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Blogs</a>
+    <a href="#">Contact Us</a>
+  </nav>
+
+  <a href="#" class="btn-book">Book Now</a>
+
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content1">
+        <h1>Packages </h1>
+        <!-- <p>Home <span>›</span> About Us</p> -->
+    </div>
+</section>
+
+
+
+<section class="destination-section">
+
+    <!-- LEFT CONTENT -->
+    <div class="cards">
+
+        <!-- CARD -->
+        <div class="cardpack">
+            <img src="images/image_68ce9f0ea4c5b5.65186874.webp">
+            <div class="card-body">
+                <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+                <h3>Goa Beach Escape</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Goa, India</p>
+
+                <div class="price-row">
+                    <h4>₹14999/-</h4>
+                    <span><i class="fa-regular fa-user"></i> Per Person</span>
+                </div>
+
+                <button class="book-btn">Book Now →</button>
+            </div>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="cardpack">
+            <img src="images/image_68cea04a67c659.40000128.webp">
+            <div class="card-body">
+                <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+                <h3>Goa Beach Escape</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Goa, India</p>
+
+                <div class="price-row">
+                    <h4>₹14999/-</h4>
+                    <span><i class="fa-regular fa-user"></i> Per Person</span>
+                </div>
+
+                <button class="book-btn">Book Now →</button>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="cardpack">
+            <img src="images/image_68cea1566d1812.21007449.webp">
+            <div class="card-body">
+                <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+                <h3>Pondicherry Getaway</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Pondicherry, India</p>
+
+                <div class="price-row">
+                    <h4>₹11999/-</h4>
+                    <span><i class="fa-regular fa-user"></i> Per Person</span>
+                </div>
+
+                <button class="book-btn">Book Now →</button>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="cardpack">
+            <img src="images/image_68d391b58eec71.75220471.webp">
+            <div class="card-body">
+                <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+                <h3>Pondicherry Getaway</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Pondicherry, India</p>
+
+                <div class="price-row">
+                    <h4>₹11999/-</h4>
+                    <span><i class="fa-regular fa-user"></i> Per Person</span>
+                </div>
+
+                <button class="book-btn">Book Now →</button>
+            </div>
+        </div>
+         
+
+        <!-- CARD -->
+        <div class="cardpack">
+            <img src="images/image_one_6933e2ff2227f2.74319464.webp">
+            <div class="card-body">
+                <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+                <h3>Pondicherry Getaway</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Pondicherry, India</p>
+
+                <div class="price-row">
+                    <h4>₹11999/-</h4>
+                    <span><i class="fa-regular fa-user"></i> Per Person</span>
+                </div>
+
+                <button class="book-btn">Book Now →</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <div class="help-box">
+        <h2>Need Help?<br>We Are Here To Help You</h2>
+        <!-- <img src="https://dummyimage.com/150x60/ffffff/000000&text=GLOBE+ERA"> -->
+        <p>You Get Online Support</p>
+        <h3>+91-9873744533</h3>
+        <button class="read-btn">Read More →</button>
+    </div>
+
+</section>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-col">
+      <h2>GLOBEera Travel</h2>
+
+      <p>
+        At GlobeEra Travel, we create journeys filled with comfort,
+        excitement, and memories that last a lifetime.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Packages</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="#">Accommodation</a></li>
+        <li><a href="#">View More</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <ul class="contact">
+        <li><i class="fas fa-phone"></i> +91-9873744533</li>
+        <li><i class="fas fa-envelope"></i> globeeratravel@gmail.com</li>
+        <li>
+          <i class="fas fa-location-dot"></i>
+          Amrapali Golf Homes <br>
+          L2/1002, Pincode 201301
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2025 Globe Era Travel. All Rights Reserved.</p>
+
+    <div class="payments">
+      <span>VISA</span>
+      <span>MC</span>
+      <span>PayPal</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+ function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+document.querySelector(".search-btn").addEventListener("click", () => {
+  alert("Search clicked!");
+});
+</script>
+
+
+
+
+</body>
+</html>

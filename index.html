@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Travel Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+</style>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <span>📍 Amarpali Golf Homes L2/1002</span>
+  <span>📞 +91-9873744533</span>
+  <span>✉️ globeeratravel@gmail.com</span>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">
+    <!-- <img src="logo.png" alt="Logo"> -->
+    <span>GLOBE ERA</span>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="packages.html">Our Packages</a>
+    <a href="services.html">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Blogs</a>
+    <a href="#">Contact Us</a>
+  </nav>
+
+  <a href="#" class="btn-book">Book Now</a>
+
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <!-- Background video (optional) -->
+  <video autoplay muted loop class="bg-video">
+    <source src="images/videoplayback (8).mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <p class="tagline">Get unforgettable pleasure with us</p>
+    <h1>Natural Wonder <br> of the world</h1>
+
+    <div class="hero-buttons">
+      <button class="btn primary">Explore Tours</button>
+      <button class="btn outline">Our Services</button>
+    </div>
+  </div>
+
+  
+</section>
+
+<!-- Search Box -->
+<div class="search-wrapper">
+
+  <div class="search-box">
+
+    <div class="search-item">
+      <label>Destination</label>
+      <input type="text" style=" font-weight: bolder;" placeholder="Select Destination">
+    </div>
+
+    <div  class="divider"></div>
+
+    <div class="search-item">
+      <label>No. of Pax</label>
+      <input type="number" style="font-weight: bolder;" placeholder="Select No. of Pax">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="search-item">
+      <label>Start of Journey</label>
+      <input  style="font-weight: bolder;"  type="date">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="search-item">
+      <label>End of Journey</label>
+      <input style="font-weight: bolder;" type="date">
+    </div>
+
+    <button class="search-btn">Search</button>
+
+  </div>
+
+</div>
+
+
+<section class="destination-section">
+
+  <span class="subtitle">Wonderful Place For You</span>
+  <h2 class="title">Amazing Destination Crafted Just For You</h2>
+
+  <div class="destination-grid">
+
+    <div class="card">
+      <img src="images/Vietnam.webp" alt="">
+      <h3>Malaysia</h3>
+      <span>See More</span>
+    </div>
+
+    <div class="card">
+      <img src="images/uttrakhand.webp" alt="">
+      <h3>Uttrakhand</h3>
+      <span>See More</span>
+    </div>
+
+    <div class="card">
+      <img src="images/Thailand.webp" alt="">
+      <h3>Bali</h3>
+      <span>See More</span>
+    </div>
+
+    <div class="card">
+      <img src="images/singapore.webp" alt="">
+      <h3>Darjeeling</h3>
+      <span>See More</span>
+    </div>
+
+    <div class="card">
+      <img src="images/ooty.webp" alt="">
+      <h3>Singapore</h3>
+      <span>See More</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="hero1">
+  <div class="container1">
+
+    <!-- LEFT IMAGE AREA -->
+    <div class="image-grid">
+      <div class="img tall">
+        <img src="images/image_one_6933e2ff2227f2.74319464.webp" alt="">
+      </div>
+      <div class="img round1">
+        <img src="images/image_two_6933e2ff222966.15158883.webp" alt="">
+      </div>
+      <div class="img round2">
+        <img src="images/manali.webp" alt="">
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+      <h4>Let’s Go Together</h4>
+      <h1>Plan Your Trip<br>With Us</h1>
+
+      <p>
+        Traveling becomes unforgettable when every detail is taken care of.
+        We create journeys filled with comfort, excitement, and memories that last a lifetime.
+      </p>
+
+      <div class="feature">
+        <i class="fa-solid fa-route"></i>
+        <div>
+          <h3>Exclusive Trip</h3>
+          <p>Discover unique and tailor-made travel experiences designed just for you.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <i class="fa-solid fa-user-tie"></i>
+        <div>
+          <h3>Professional Guidance</h3>
+          <p>Our expert travel guides ensure you experience more than just a visit.</p>
+        </div>
+      </div>
+
+      <button class="btn1">Learn More</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="destination-section1">
+  <h4>Top Destination</h4>
+  <h2>Iconic Destinations</h2>
+
+  <div class="carousel">
+    <div class="track-container">
+      <div class="track">
+        <div class="card1">
+          <img src="images/darjeeling.webp">
+          <span>Dubai</span>
+           <a href="#">View All →</a>
+        </div>
+
+        <div class="card1">
+          <img src="images/image_68ce9f0ea4c5b5.65186874.webp">
+          <span>Malaysia</span>
+           <a href="#">View All →</a>
+        </div>
+
+        <div class="card1 active">
+          <img src="images/image_68cea04a67c659.40000128.webp">
+          <span>Uttrakhand</span>
+          <a href="#">View All →</a>
+        </div>
+
+        <div class="card1">
+          <img src="images/image_68cea1566d1812.21007449.webp">
+          <span>Singapore</span>
+           <a href="#">View All →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="tour-section">
+  <h4>Best Place For You</h4>
+  <h2>Most Popular Domestic Tour</h2>
+  <p class="subtitle">
+    Let us take you to the places everyone dreams about, and create moments you'll treasure forever.
+  </p>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <!-- CARD 1 -->
+      <div class="tour-card">
+        <img src="images/image_68cea04a67c659.40000128.webp">
+        <div class="card-content">
+          <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+          <h3>Udaipur Tour - The City Of Lakes</h3>
+          <p class="location">📍 Rajasthan, India</p>
+          <div class="price">
+            <strong>₹12,500/-</strong> <span>Per Person</span>
+          </div>
+          <button class="book-btn">Book Now →</button>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="tour-card">
+        <img src="images/image_68cea1566d1812.21007449.webp">
+        <div class="card-content">
+          <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+          <h3>Goa Beach Escape</h3>
+          <p class="location">📍 Goa, India</p>
+          <div class="price">
+            <strong>₹14,999/-</strong> <span>Per Person</span>
+          </div>
+          <button class="book-btn">Book Now →</button>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="tour-card">
+        <img src="images/image_one_6933e2ff2227f2.74319464.webp">
+        <div class="card-content">
+          <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+          <h3>Pondicherry Getaway</h3>
+          <p class="location">📍 Pondicherry, India</p>
+          <div class="price">
+            <strong>₹11,999/-</strong> <span>Per Person</span>
+          </div>
+          <button class="book-btn">Book Now →</button>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="tour-card">
+        <img src="images/istock-157773670.webp">
+        <div class="card-content">
+          <div class="rating">★★★★★ <span>(4.8 Rating)</span></div>
+          <h3>Dubai Extravaganza Tour</h3>
+          <p class="location">📍 Dubai, UAE</p>
+          <div class="price">
+            <strong>₹70,000/-</strong> <span>Per Person</span>
+          </div>
+          <button class="book-btn">Book Now →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <h4>Make Your Tour More Pleasure</h4>
+  <h2>Recent Gallery</h2>
+
+  <div class="gallery-grid">
+    <div class="gallery-item tall">
+      <img src="images/darjeeling.webp">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/image_68ce9f0ea4c5b5.65186874.webp">
+    </div>
+
+    <div class="gallery-item tall">
+      <img src="images/image_68cea04a67c659.40000128.webp">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/image_68cea1566d1812.21007449.webp">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/image_68d391b58eec71.75220471.webp">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/image_one_6933e2ff2227f2.74319464.webp">
+    </div>
+
+    <div class="gallery-item tall">
+      <img src="images/image_two_6933e2ff222966.15158883.webp">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/istock-157773670.webp">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="stats-section">
+
+  <div class="stats-container">
+
+    <div class="stat-card">
+      <div class="circle1">
+        <h2 class="data" data-target="4">0+</h2>
+        <p>Years Experience</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="circle2">
+        <h2 class="data" data-target="97">0%</h2>
+        <p>Retention Rate</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="circle3">
+        <h2  class="data"  data-target="999">0+</h2>
+        <p>Tour Completed</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="circle4">
+        <h2 class="data" data-target="4500">0</h2>
+        <p>Happy Travellers</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="blogs">
+  <div class="blogs-container">
+
+    <!-- Left Content -->
+    <div class="blogs-left">
+      <p class="subtitle">Know More About Nature</p>
+      <h2 class="title">Our Blogs</h2>
+
+      <div class="blog-card">
+        <img src="images/image_68ce52690fce53.96619444.webp"
+             alt="Travel Blog">
+        <h3>Discover the Hidden Gems of India</h3>
+        <a href="#" class="btn-outline">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Right Button -->
+    <div class="blogs-right">
+      <a href="#" class="btn-main">See More Articles →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-col">
+      <h2>GLOBEera Travel</h2>
+
+      <p>
+        At GlobeEra Travel, we create journeys filled with comfort,
+        excitement, and memories that last a lifetime.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Packages</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="#">Accommodation</a></li>
+        <li><a href="#">View More</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <ul class="contact">
+        <li><i class="fas fa-phone"></i> +91-9873744533</li>
+        <li><i class="fas fa-envelope"></i> globeeratravel@gmail.com</li>
+        <li>
+          <i class="fas fa-location-dot"></i>
+          Amrapali Golf Homes <br>
+          L2/1002, Pincode 201301
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2025 Globe Era Travel. All Rights Reserved.</p>
+
+    <div class="payments">
+      <span>VISA</span>
+      <span>MC</span>
+      <span>PayPal</span>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+document.querySelector(".search-btn").addEventListener("click", () => {
+  alert("Search clicked!");
+});
+
+
+
+// optional click effect
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    alert("Destination clicked!");
+  });
+});
+
+const counters = document.querySelectorAll(".data");
+
+const startCounter = () => {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+
+    const update = () => {
+      const increment = target / 80;
+      if(count < target){
+        count += increment;
+        counter.innerText = Math.ceil(count) + (counter.innerText.includes('%') ? '%' : '+');
+        setTimeout(update, 30);
+      }else{
+        counter.innerText = target + (counter.innerText.includes('%') ? '%' : '+');
+      }
+    };
+    update();
+  });
+};
+
+window.addEventListener("scroll", () => {
+  const section = document.querySelector(".stats-section");
+  const sectionTop = section.getBoundingClientRect().top;
+  if(sectionTop < window.innerHeight - 100){
+    startCounter();
+  }
+},{ once:true });
+
+
+
+
+
+
+</script>
+</body>
+</html>
